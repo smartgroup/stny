@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<node>
+ <lang>zh_CN</lang>
+ <logo_src>template/images/site_logo.png</logo_src>
+ <logo_width>299</logo_width>
+ <logo_height>92</logo_height>
+ <bbs_title>官方论坛</bbs_title>
+ <bbs_url>http://www.85wu.com</bbs_url>
+ <bbs_description>使用中碰到问题，可以到这里来发贴求助</bbs_description>
+ <host_title>推荐主机</host_title>
+ <host_url>http://www.885hl.com</host_url>
+ <host_description>配上好的虚拟主机，发挥建站最大威力</host_description>
+ <footer>建站之星（SiteStar）网站建设系统 V2.0 美橙互联&lt;br /&gt;Copyrigt@2010 www.sitestar.cn All Right Reserved</footer>
+</node>
+<node>
+ <lang>en</lang>
+ <logo_src>template/images/site_logo.png</logo_src>
+ <logo_width>299</logo_width>
+ <logo_height>92</logo_height>
+ <bbs_title>Official BBS</bbs_title>
+ <bbs_url>http://www.sitestar.cn/bbs/</bbs_url>
+ <bbs_description>Any trouble，please seek help from here</bbs_description>
+ <host_title>Recommend Host</host_title>
+ <host_url>http://www.cndns.com/</host_url>
+ <host_description>Custom shortcuts brief introduction</host_description>
+ <footer>Enterprise intelligence destinati management system&lt;br /&gt;Copyrigt@2010 yourdomain All Right Reserved</footer>
+</node>
+</root>
