@@ -1,4 +1,4 @@
-﻿/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
@@ -9,9 +9,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- ----------------------------
--- Table structure for `ss_admin_menu_categories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_admin_menu_categories`;
 CREATE TABLE `ss_admin_menu_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -21,9 +18,7 @@ CREATE TABLE `ss_admin_menu_categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_admin_menu_categories
--- ----------------------------
+
 INSERT INTO `ss_admin_menu_categories` VALUES ('1', 'Settings', 'mod_site', 'admin_dashboard');
 INSERT INTO `ss_admin_menu_categories` VALUES ('2', 'Pages', 'mod_menu_item', 'admin_dashboard');
 INSERT INTO `ss_admin_menu_categories` VALUES ('3', 'Contents', 'mod_article', 'admin_dashboard');
@@ -32,9 +27,6 @@ INSERT INTO `ss_admin_menu_categories` VALUES ('5', 'Files', 'mod_filemanager', 
 INSERT INTO `ss_admin_menu_categories` VALUES ('6', 'Users', 'mod_user', 'admin_dashboard');
 INSERT INTO `ss_admin_menu_categories` VALUES ('7', 'Licenses', 'mod_authorization', 'admin_list');
 
--- ----------------------------
--- Table structure for `ss_admin_menu_items`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_admin_menu_items`;
 CREATE TABLE `ss_admin_menu_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -49,9 +41,7 @@ CREATE TABLE `ss_admin_menu_items` (
   KEY `priority` (`priority`)
 ) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_admin_menu_items
--- ----------------------------
+
 INSERT INTO `ss_admin_menu_items` VALUES ('1', 'mod_article', 'admin_list', 'Articles', '1', '1', '3');
 INSERT INTO `ss_admin_menu_items` VALUES ('3', 'mod_friendlink', 'admin_list', 'Hot Links', '1', '5', '1');
 INSERT INTO `ss_admin_menu_items` VALUES ('25', 'mod_backup', 'admin_list', 'Data Bakup/Recovery', '1', '6', '1');
@@ -73,9 +63,7 @@ INSERT INTO `ss_admin_menu_items` VALUES ('27', 'mod_advert', 'admin_list', 'Adv
 INSERT INTO `ss_admin_menu_items` VALUES ('28', 'mod_sitestarmaker', 'admin_list', 'Picture Tool', '1', '9', '1');
 INSERT INTO `ss_admin_menu_items` VALUES ('29', 'mod_bulletin', 'admin_list', 'Bulletins', '1', '5', '3');
 
--- ----------------------------
--- Table structure for `ss_admin_shortcuts`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_admin_shortcuts`;
 CREATE TABLE `ss_admin_shortcuts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -88,9 +76,6 @@ CREATE TABLE `ss_admin_shortcuts` (
   KEY `priority` (`priority`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_admin_shortcuts
--- ----------------------------
 INSERT INTO `ss_admin_shortcuts` VALUES ('1', 'mod_article', 'admin_add', 'add_article.png', '1');
 INSERT INTO `ss_admin_shortcuts` VALUES ('2', 'mod_product', 'admin_add', 'add_product.png', '2');
 INSERT INTO `ss_admin_shortcuts` VALUES ('3', 'mod_static', 'admin_add', 'add_static.png', '3');
@@ -98,9 +83,6 @@ INSERT INTO `ss_admin_shortcuts` VALUES ('4', 'mod_user', 'admin_list', 'manage_
 INSERT INTO `ss_admin_shortcuts` VALUES ('6', 'mod_site', 'admin_list', 'set_siteinfo.png', '5');
 INSERT INTO `ss_admin_shortcuts` VALUES ('7', 'mod_template', 'admin_list', 'manage_tpl.png', '6');
 
--- ----------------------------
--- Table structure for `ss_article_categories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_article_categories`;
 CREATE TABLE `ss_article_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -120,18 +102,14 @@ CREATE TABLE `ss_article_categories` (
   KEY `for_roles` (`for_roles`)
 ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_article_categories
--- ----------------------------
+
 INSERT INTO `ss_article_categories` VALUES ('1', 'Uncategorised', 'uncategorized', '0', '0', '_ALL', '0', '{admin}');
 INSERT INTO `ss_article_categories` VALUES ('7', '行业资讯', 'caa_2YXdXizI', '0', '1', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_article_categories` VALUES ('11', '公司新闻', 'caa_9xNeY9jG', '0', '5', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_article_categories` VALUES ('12', '技术文章', 'caa_6pGbxVMj', '0', '6', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_article_categories` VALUES ('13', '招贤纳士', 'caa_ZNFkRMN1', '0', '7', 'zh_CN', '1', '{member}{admin}{guest}');
 
--- ----------------------------
--- Table structure for `ss_articles`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_articles`;
 CREATE TABLE `ss_articles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -160,9 +138,7 @@ CREATE TABLE `ss_articles` (
   KEY `article_category_id` (`article_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=179 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_articles
--- ----------------------------
+
 INSERT INTO `ss_articles` VALUES ('93', 'admin', '农业部对渔业安全救助网建设予以补助', '4', '农博网 ', '', '农业部对渔业安全救助网建设予以补助', '<p>为提高渔业海难事故救助成功率，提升渔业安全通信保障能力和信息化管理水平，农业部根据2012年财政项目支出安排，拟对授牌的短波岸台和超短波岸台维护、&ldquo;三证&rdquo;齐全并纳入&ldquo;全国海洋捕捞渔船数据库&rdquo;的渔船配备新型船载渔用对讲机（90C）予以补助。</p> <p>　　全国近海渔业安全救助通信网主要解决离岸50海里内船岸和船与船之间的近距离通信，并为装有新型渔用对讲机（90C）的渔船提供接收遇险报警、 播发气象预报等安全通信服务。我省将根据项目指南认真组织申报，并加强项目实施管理，努力提升我省近海渔船的海陆语音通信质量。</p>', '1329375078', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '7', '0', '');
 INSERT INTO `ss_articles` VALUES ('94', 'admin', '商务部残联开展\"万村千乡市场工程助残扶贫项目\"', '5', '新华社', '', '商务部残联开展\"万村千乡市场工程助残扶贫项目\"', '<p>新华社北京２月１５日电 </p><p>记者１５日从中国残联了解到，为做好新时期农村残疾人扶贫开发工作，商务部和中国残联决定在&ldquo;十二五&rdquo;期间依托商务部门实施的&ldquo;万村千乡市场工程&rdquo;，共同开展&ldquo;万村千乡市场工程助残扶贫项目&rdquo;，切实帮助农村贫困残疾人实现就业、创业，增加收入，摆脱贫困。</p><p>　　&ldquo;万村千乡市场工程助残扶贫项目&rdquo;的目标任务是２０１２至２０１５年，通过地方各级商务主管部门实施的&ldquo;万村千乡市场工程&rdquo;，安置１２０００名农村贫困残疾人或家庭成员就业，帮扶２０００户农村贫困残疾人家庭创办村级店。</p><p>　　这一项目开展过程中，各地将依托县级商贸流通龙头企业、配送中心、乡级店，安置符合条件的贫困残疾人或家庭成员就业，稳定获得工资收入。同时，帮助农村残疾人低保户或贫困户开办村一级的小商店，并妥善解决店铺用地、装修、营业证照、税费减免、用水用电等实际问题和困难。</p><p>　　项目要求，&ldquo;万村千乡工程市场工程&rdquo;承办企业、配送中心等用人单位要建立残疾人岗位预留制度，明确个别岗位专门用于安置残疾人或其家庭成员。</p>', '1329375102', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '7', '0', '');
 INSERT INTO `ss_articles` VALUES ('98', 'admin', '农发行湖南分行将放贷100亿元支持“三农”', '2', '农民日报 ', '', '农发行湖南分行将放贷100亿元支持“三农”', '<p>2月14日，记者从农发行湖南省分行营业部支行行长会议获悉，该行今年将在长沙累放贷款100亿元，贷款余额力争净增80亿元，大力支持农业科技成果转化、水利建设和农村基础设施建设等。</p> <p>　　据了解，农发行湖南省分行营业部去年切实履行信贷支农职能，各项贷款余额首次突破120亿元大关。为贯彻落实中央一号文件，该行今年将进一步调 整优化信贷结构，在巩固和发展粮棉油购销储信贷业务的同时，将加大对农业科技的贷款支持力度，重点支持列入国家和省级政府推广计划的优良品种、节水灌溉、 农产品加工、农业机械等领域的科技成果转化和产业化项目，择优支持从事农业良种育繁推一体化的大型骨干企业发展。</p>', '1329375419', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '7', '0', '');
@@ -203,9 +179,7 @@ INSERT INTO `ss_articles` VALUES ('126', 'admin', '**首批静音箱式发电机
 INSERT INTO `ss_articles` VALUES ('127', 'admin', '办公室主任', '1', '本站', '', '**有限公司招聘办公室主任', '<p>**有限公司 </p><p>招聘职位 	  	 <br /> 办公室主任<br />职位类型： 	全职 	</p><p>薪金待遇： 	9999元/月<br />招聘部门： 	公司内部 </p><p>招聘人数： 	1人<br />工作地区： ** 	</p><p>学历要求： 	专科 	</p><p>工作年限： 	五年以上<br />年龄要求： 	30岁-45岁 	</p><p>性别要求： 	男</p><p>职位描述：<br />主要职责:全面主持办公室工作.<br />任职条件：<br />1、男性，年龄28-45岁，品正貌端，金融、工商行政管理、相关专业本科以上学历。<br />2、从事行政或办公室工作5年以上，2年以上办公室主任经历，2年以上银行等金融行业经历，为人正直，具有较强的人际交往能力、对外协调能力、文案功底，熟悉人力资源管理，能熟练操作电脑，熟练驾驶。工资10000元/月。</p>', '1329379140', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '1', '13', '0', '');
 INSERT INTO `ss_articles` VALUES ('128', 'admin', '市场专员', '2', '本站', '', '**有限公司招聘市场专员', '<p>**有限公司&nbsp;</p><p>招聘职位 	  	 市场专员<br />职位类型： 	全职 	</p><p>薪金待遇： 	面议<br />招聘部门： 	公司内部 	</p><p>招聘人数： 	2人<br />工作地区： ** 	</p><p>现所在地： 	不限<br />学历要求： 	本科 	</p><p>工作年限： 	不限<br />年龄要求： 	不限 	</p><p>性别要求： 	不限<br />职位描述：<br />1、男女不限，大学本科及以上学历；<br />2、市场营销或营销策划相关专业优先，两年以上相关工作经历；<br />3、具有吃苦耐劳、团队合作精神；<br />4、具有一定的市场分析和数据分析能力；<br />5、具有一定的文字驾驭能力，思维敏捷、条理清晰，熟练掌握办公软件。<br />&nbsp;</p>', '1329379273', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '1', '13', '0', '');
 
--- ----------------------------
--- Table structure for `ss_atemporarise`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_atemporarise`;
 CREATE TABLE `ss_atemporarise` (
   `key` varchar(32) DEFAULT NULL,
@@ -214,9 +188,7 @@ CREATE TABLE `ss_atemporarise` (
   KEY `key` (`key`) USING HASH
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_atemporarise
--- ----------------------------
+
 INSERT INTO `ss_atemporarise` VALUES ('f1389c3372e58c7fec3e3cb1b6eaa2b3', 'a:1:{i:0;s:1:\"1\";}', 'ss_module_blocks');
 INSERT INTO `ss_atemporarise` VALUES ('f18f4f4ce796a39c23a46fd947dd96ff', 'a:1:{i:0;s:1:\"1\";}', 'ss_module_blocks');
 INSERT INTO `ss_atemporarise` VALUES ('a9e3a9db027b0ad1d3b5dd513df0a291', 'a:1:{i:0;s:1:\"1\";}', 'ss_module_blocks');
@@ -225,9 +197,7 @@ INSERT INTO `ss_atemporarise` VALUES ('d5fde2c218251849f5970529aa6cc983', 'a:1:{
 INSERT INTO `ss_atemporarise` VALUES ('cbe5f25abb3a048084f8c7dbac1a2f0c', 'a:1:{i:0;s:1:\"1\";}', 'ss_module_blocks');
 INSERT INTO `ss_atemporarise` VALUES ('f49336f9031823137c08bae78f0f0a90', 'a:1:{i:0;s:1:\"1\";}', 'ss_module_blocks');
 
--- ----------------------------
--- Table structure for `ss_background_musics`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_background_musics`;
 CREATE TABLE `ss_background_musics` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -237,13 +207,6 @@ CREATE TABLE `ss_background_musics` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_background_musics
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ss_backups`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_backups`;
 CREATE TABLE `ss_backups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -252,13 +215,6 @@ CREATE TABLE `ss_backups` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_backups
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ss_bulletins`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_bulletins`;
 CREATE TABLE `ss_bulletins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -281,13 +237,6 @@ CREATE TABLE `ss_bulletins` (
   FULLTEXT KEY `content` (`content`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_bulletins
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ss_delivery_addresses`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_delivery_addresses`;
 CREATE TABLE `ss_delivery_addresses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -306,27 +255,14 @@ CREATE TABLE `ss_delivery_addresses` (
   KEY `dist_id` (`dist_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_delivery_addresses
--- ----------------------------
 INSERT INTO `ss_delivery_addresses` VALUES ('2', '张四中', '130000', '130200', '130203', '中山路333号', '610000', '787878787', '5');
 
--- ----------------------------
--- Table structure for `ss_delivery_methods`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_delivery_methods`;
 CREATE TABLE `ss_delivery_methods` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_delivery_methods
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ss_download_categories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_download_categories`;
 CREATE TABLE `ss_download_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -344,15 +280,11 @@ CREATE TABLE `ss_download_categories` (
   KEY `for_roles` (`for_roles`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_download_categories
--- ----------------------------
+
 INSERT INTO `ss_download_categories` VALUES ('1', 'Uncategorised', 'uncategorized', '0', '_ALL', '0', '{admin}');
 INSERT INTO `ss_download_categories` VALUES ('7', '帮助文档', 'cad_Gm5U2bEh', '0', 'zh_CN', '1', '{member}{admin}');
 
--- ----------------------------
--- Table structure for `ss_downloads`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_downloads`;
 CREATE TABLE `ss_downloads` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -374,16 +306,12 @@ CREATE TABLE `ss_downloads` (
   FULLTEXT KEY `description` (`description`)
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_downloads
--- ----------------------------
+
 INSERT INTO `ss_downloads` VALUES ('1', '', '', '0', '0', '0', '', '1', '{guest}', '0');
 INSERT INTO `ss_downloads` VALUES ('14', '5AyG2R5pBYFneEv.jpg', '123123123123123123', '1251956312', '-1', '-1', 'zh_CN', '1', '{member}{admin}{guest}', '7');
 INSERT INTO `ss_downloads` VALUES ('15', 'obbkm4mv.jpg', '下载下载下载下载下载下载下载下载', '1251956428', '-1', '-1', 'zh_CN', '1', '{member}{admin}{guest}', '7');
 
--- ----------------------------
--- Table structure for `ss_friendlinks`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_friendlinks`;
 CREATE TABLE `ss_friendlinks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -402,16 +330,11 @@ CREATE TABLE `ss_friendlinks` (
   KEY `create_time` (`create_time`)
 ) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_friendlinks
--- ----------------------------
 INSERT INTO `ss_friendlinks` VALUES ('14', 'Google', 'RvwWjGxA.png', 'http://google.com', 'en', '1249826023', '{member}{admin}{guest}', '1', '1');
 INSERT INTO `ss_friendlinks` VALUES ('15', '美橙互联', '11111.jpg', 'http://www.cndns.com', 'zh_CN', '1251273744', '{member}{admin}{guest}', '1', '1');
 INSERT INTO `ss_friendlinks` VALUES ('16', '建站之星', 'sitestar.gif', 'http://www.sitestar.cn', 'zh_CN', '1261988958', '{member}{admin}{guest}', '1', '1');
 
--- ----------------------------
--- Table structure for `ss_languages`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_languages`;
 CREATE TABLE `ss_languages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -422,15 +345,10 @@ CREATE TABLE `ss_languages` (
   UNIQUE KEY `locale` (`locale`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_languages
--- ----------------------------
 INSERT INTO `ss_languages` VALUES ('2', '简体中文', 'zh_CN', '1');
 INSERT INTO `ss_languages` VALUES ('3', 'English', 'en', '0');
 
--- ----------------------------
--- Table structure for `ss_marquees`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_marquees`;
 CREATE TABLE `ss_marquees` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -443,9 +361,7 @@ CREATE TABLE `ss_marquees` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=924 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_marquees
--- ----------------------------
+
 INSERT INTO `ss_marquees` VALUES ('1', '927', 'text', '奇瑞新A3本月上市 老款北京优惠9000元', '', '2', '55');
 INSERT INTO `ss_marquees` VALUES ('2', '927', 'text', '一汽丰田祭出“价格利器', '', '2', '54');
 INSERT INTO `ss_marquees` VALUES ('3', '927', 'text', '天籁北京最高优惠2.4万元 赠3000元油卡', '', '2', '52');
@@ -692,9 +608,7 @@ INSERT INTO `ss_marquees` VALUES ('878', '951', 'pic', '鳝鱼', 'upload/image/s
 INSERT INTO `ss_marquees` VALUES ('876', '951', 'pic', '大闸蟹', 'upload/image/pangxie_lit.jpg', '3', '262');
 INSERT INTO `ss_marquees` VALUES ('875', '951', 'pic', '香猪', 'upload/image/xiangzhu_lit.jpg', '3', '261');
 
--- ----------------------------
--- Table structure for `ss_menu_items`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_menu_items`;
 CREATE TABLE `ss_menu_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -724,9 +638,7 @@ CREATE TABLE `ss_menu_items` (
   KEY `name` (`name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=604 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_menu_items
--- ----------------------------
+
 INSERT INTO `ss_menu_items` VALUES ('1', '公司简介', '_m=mod_static&_a=view&sc_id=2', 'company_info', '', '', '0', '2', 'zh_CN', '1', '{member}{admin}{guest}', '0', 'default', '', '', '');
 INSERT INTO `ss_menu_items` VALUES ('2', '首页', '_m=frontpage&_a=index', 'frontpage', '', '', '0', '1', 'zh_CN', '1', '{member}{admin}{guest}', '0', 'default', '', '', '');
 INSERT INTO `ss_menu_items` VALUES ('549', '纤维作物', '_m=mod_product&_a=prdlist&cap_id=215', 'product_list', 'product_list|1|产品列表', '', '547', '6', 'zh_CN', '1', '{member}{admin}{guest}', '0', '', '', '', '');
@@ -772,16 +684,11 @@ CREATE TABLE `ss_menus` (
   KEY `for_roles` (`for_roles`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_menus
--- ----------------------------
 INSERT INTO `ss_menus` VALUES ('1', '主导航菜单', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_menus` VALUES ('2', '辅助菜单', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_menus` VALUES ('5', 'hello', 'zh_CN', '1', '{member}{admin}{guest}');
 
--- ----------------------------
--- Table structure for `ss_messages`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_messages`;
 CREATE TABLE `ss_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -793,13 +700,7 @@ CREATE TABLE `ss_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_messages
--- ----------------------------
 
--- ----------------------------
--- Table structure for `ss_module_blocks`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_module_blocks`;
 CREATE TABLE `ss_module_blocks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -826,9 +727,7 @@ CREATE TABLE `ss_module_blocks` (
   KEY `for_roles` (`for_roles`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11288 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_module_blocks
--- ----------------------------
+
 INSERT INTO `ss_module_blocks` VALUES ('928', 'mod_cart', 'cartstatus', 'mb_B2R2CbVO', '斯蒂芬', '1', 'right', '', 'zh_CN', '3acef559e72ef0b230c2b66e9b9ce40f50e1df2d', '-1', '1', '{member}{admin}{guest}', '', '');
 INSERT INTO `ss_module_blocks` VALUES ('222', 'mod_media', 'show_image', 'mb_logo', '', '0', 'logo', 'a:4:{s:7:\"img_src\";s:21:\"upload/image/logo.png\";s:8:\"img_desc\";s:0:\"\";s:9:\"img_width\";s:0:\"\";s:10:\"img_height\";s:0:\"\";}', 'zh_CN', '_ALL', '0', '1', '{member}{admin}{guest}', '', '');
 INSERT INTO `ss_module_blocks` VALUES ('171', 'mod_cart', 'cartstatus', 'mb_m325bcJj', '购物车', '0', 'cart', '', 'zh_CN', '_ALL', '0', '1', '{member}{admin}{guest}', '', '');
@@ -851,9 +750,7 @@ INSERT INTO `ss_module_blocks` VALUES ('951', 'mod_marquee', 'marquee', 'mb_fEsL
 INSERT INTO `ss_module_blocks` VALUES ('947', 'mod_static', 'company_intro', 'mb_xbjAsQCl', '公司简介', '1', 'right', 'a:3:{s:9:\"slide_num\";s:1:\"1\";s:14:\"slide_temp_num\";s:1:\"1\";s:16:\"cpy_intro_number\";s:3:\"320\";}', 'zh_CN', '44f01ceb6551c666f3a79d8189dfad01ff566907', '0', '1', '{member}{admin}{guest}', '', '');
 INSERT INTO `ss_module_blocks` VALUES ('948', 'mod_product', 'newprd', 'mb_2EKg2ElD', '最新产品', '1', 'right', 'a:7:{s:9:\"slide_num\";s:1:\"1\";s:14:\"slide_temp_num\";s:1:\"1\";s:15:\"prd_newlst_size\";s:1:\"8\";s:12:\"prd_newlst_d\";s:1:\"4\";s:16:\"prd_newlst_price\";s:1:\"1\";s:21:\"product_category_list\";s:3:\"212\";s:15:\"prd_newlst_cate\";s:0:\"\";}', 'zh_CN', '44f01ceb6551c666f3a79d8189dfad01ff566907', '1', '1', '{member}{admin}{guest}', '', '');
 
--- ----------------------------
--- Table structure for `ss_navigations`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_navigations`;
 CREATE TABLE `ss_navigations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -862,13 +759,7 @@ CREATE TABLE `ss_navigations` (
   UNIQUE KEY `navigation` (`navigation`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_navigations
--- ----------------------------
 
--- ----------------------------
--- Table structure for `ss_online_orders`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_online_orders`;
 CREATE TABLE `ss_online_orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -896,17 +787,12 @@ CREATE TABLE `ss_online_orders` (
   KEY `order_status` (`order_status`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_online_orders
--- ----------------------------
+
 INSERT INTO `ss_online_orders` VALUES ('1', '2010000001', '2', '', '', '', '', '', '', '', '0.00', '760000.00', '740000.00', '740000.00', '', '1280135492', '1', '');
 INSERT INTO `ss_online_orders` VALUES ('2', '2010000002', '3', '', '', '', '', '', '', '', '0.00', '777770.00', '777770.00', '777770.00', '', '1282184346', '1', '');
 INSERT INTO `ss_online_orders` VALUES ('3', '2010000003', '1', '', '', '', '', '', '', '', '0.00', '333330.00', '333330.00', '333330.00', '', '1282791214', '1', '');
 INSERT INTO `ss_online_orders` VALUES ('4', '2012000004', '1', '', '', '', '', '', '', '', '0.00', '22.00', '20.00', '20.00', 'uyy', '1330049625', '1', '');
 
--- ----------------------------
--- Table structure for `ss_online_qqs`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_online_qqs`;
 CREATE TABLE `ss_online_qqs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -918,15 +804,9 @@ CREATE TABLE `ss_online_qqs` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_online_qqs
--- ----------------------------
 INSERT INTO `ss_online_qqs` VALUES ('1', '800015083', '0', '1', '在线客服', 'zh_CN');
 INSERT INTO `ss_online_qqs` VALUES ('2', '800015083', '0', '1', '在线客服', 'zh_CN');
 
--- ----------------------------
--- Table structure for `ss_onlinepay_histories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_onlinepay_histories`;
 CREATE TABLE `ss_onlinepay_histories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -945,16 +825,10 @@ CREATE TABLE `ss_onlinepay_histories` (
   KEY `finished` (`finished`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_onlinepay_histories
--- ----------------------------
 INSERT INTO `ss_onlinepay_histories` VALUES ('1', '2', 'ord2009000001', '1', '1251258421', '0', '0');
 INSERT INTO `ss_onlinepay_histories` VALUES ('2', '5', 'ord2009000005', '1', '1251291605', '0', '0');
 INSERT INTO `ss_onlinepay_histories` VALUES ('3', '2', 'ord2010000001', '1', '1280135503', '0', '0');
 
--- ----------------------------
--- Table structure for `ss_order_products`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_order_products`;
 CREATE TABLE `ss_order_products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -967,9 +841,6 @@ CREATE TABLE `ss_order_products` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_order_products
--- ----------------------------
 INSERT INTO `ss_order_products` VALUES ('10', '6', '8', '08年热销系列', 'upload/image/V4w349rJ.jpg', '79.20', '1');
 INSERT INTO `ss_order_products` VALUES ('11', '5', '9', '本月推荐产品', 'upload/image/AvRQaKfa.jpg', '104.30', '11');
 INSERT INTO `ss_order_products` VALUES ('12', '20', '9', '本周推荐产品', 'upload/image/Bdk84QIm.jpg', '330.00', '21');
@@ -981,9 +852,6 @@ INSERT INTO `ss_order_products` VALUES ('17', '233', '2', '红旗盛世4.3L精�
 INSERT INTO `ss_order_products` VALUES ('18', '209', '3', '2010款东风雪铁龙C2 1.4L手动运动型', 'upload/image/rwBLxur5.jpg', '333330.00', '1');
 INSERT INTO `ss_order_products` VALUES ('19', '266', '4', '樱桃', 'upload/image/yingt_lit.jpg', '20.00', '1');
 
--- ----------------------------
--- Table structure for `ss_parameters`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_parameters`;
 CREATE TABLE `ss_parameters` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -993,9 +861,6 @@ CREATE TABLE `ss_parameters` (
   KEY `key` (`key`)
 ) ENGINE=MyISAM AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_parameters
--- ----------------------------
 INSERT INTO `ss_parameters` VALUES ('1', 'DEFAULT_MODULE', 'frontpage');
 INSERT INTO `ss_parameters` VALUES ('2', 'DEFAULT_ACTION', 'index');
 INSERT INTO `ss_parameters` VALUES ('4', 'USE_SMTP', '0');
@@ -1075,9 +940,6 @@ INSERT INTO `ss_parameters` VALUES ('88', 'MEMBER_VERIFY', '0');
 INSERT INTO `ss_parameters` VALUES ('89', 'CURRENCY', 'CNY');
 INSERT INTO `ss_parameters` VALUES ('90', 'CURRENCY_SIGN', '￥');
 
--- ----------------------------
--- Table structure for `ss_payment_accounts`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_payment_accounts`;
 CREATE TABLE `ss_payment_accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1090,9 +952,6 @@ CREATE TABLE `ss_payment_accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_payment_accounts
--- ----------------------------
 INSERT INTO `ss_payment_accounts` VALUES ('1', '1', '', '', '', '', '0');
 INSERT INTO `ss_payment_accounts` VALUES ('2', '2', '', '', '', '', '0');
 INSERT INTO `ss_payment_accounts` VALUES ('6', '6', '', '', '', '', '0');
@@ -1103,9 +962,6 @@ INSERT INTO `ss_payment_accounts` VALUES ('5', '5', '', '', '', '', '0');
 INSERT INTO `ss_payment_accounts` VALUES ('8', '8', '', '', '', '', '0');
 INSERT INTO `ss_payment_accounts` VALUES ('9', '9', '', '', '', '', '0');
 
--- ----------------------------
--- Table structure for `ss_payment_providers`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_payment_providers`;
 CREATE TABLE `ss_payment_providers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1114,9 +970,6 @@ CREATE TABLE `ss_payment_providers` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_payment_providers
--- ----------------------------
 INSERT INTO `ss_payment_providers` VALUES ('1', 'alipay', '支付宝');
 INSERT INTO `ss_payment_providers` VALUES ('2', '99bill', '快钱');
 INSERT INTO `ss_payment_providers` VALUES ('6', 'alipaymed', '支付宝中介担保');
@@ -1127,9 +980,6 @@ INSERT INTO `ss_payment_providers` VALUES ('5', 'tencentimd', '财付通立即�
 INSERT INTO `ss_payment_providers` VALUES ('8', 'paypalen', 'PayPal(外卡帐号)');
 INSERT INTO `ss_payment_providers` VALUES ('9', 'moneybookers', 'MONEYBOOKERS');
 
--- ----------------------------
--- Table structure for `ss_product_categories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_product_categories`;
 CREATE TABLE `ss_product_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1149,9 +999,6 @@ CREATE TABLE `ss_product_categories` (
   KEY `for_roles` (`for_roles`)
 ) ENGINE=MyISAM AUTO_INCREMENT=248 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_product_categories
--- ----------------------------
 INSERT INTO `ss_product_categories` VALUES ('1', 'Uncategorised', 'uncategorized', '0', '0', '_ALL', '0', '{admin}');
 INSERT INTO `ss_product_categories` VALUES ('225', '农药原药', 'cap_NXYiPC40', '224', '5', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_product_categories` VALUES ('226', '有机肥', 'cap_cG9E0aV6', '224', '6', 'zh_CN', '1', '{member}{admin}{guest}');
@@ -1170,9 +1017,6 @@ INSERT INTO `ss_product_categories` VALUES ('224', '农用物资', 'cap_Rdls2phd
 INSERT INTO `ss_product_categories` VALUES ('228', '农业用具', 'cap_NZ9BuRfw', '0', '5', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_product_categories` VALUES ('229', '农用机械', 'cap_K4mZR2nb', '0', '6', 'zh_CN', '1', '{member}{admin}{guest}');
 
--- ----------------------------
--- Table structure for `ss_product_pics`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_product_pics`;
 CREATE TABLE `ss_product_pics` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1182,9 +1026,6 @@ CREATE TABLE `ss_product_pics` (
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=143 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- ----------------------------
--- Records of ss_product_pics
--- ----------------------------
 INSERT INTO `ss_product_pics` VALUES ('6', '196', 'upload/image/kriUZzwV_2.jpg');
 INSERT INTO `ss_product_pics` VALUES ('7', '196', 'upload/image/zqXiTMtu_3.jpg');
 INSERT INTO `ss_product_pics` VALUES ('8', '197', 'upload/image/FuT60vIF_2.jpg');
@@ -1244,9 +1085,7 @@ INSERT INTO `ss_product_pics` VALUES ('62', '242', 'upload/image/JhC7htCw_3.jpg'
 INSERT INTO `ss_product_pics` VALUES ('63', '243', 'upload/image/UVtP3k6S_2.jpg');
 INSERT INTO `ss_product_pics` VALUES ('64', '301', 'upload/image/xianrz2.jpg');
 
--- ----------------------------
--- Table structure for `ss_products`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_products`;
 CREATE TABLE `ss_products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1284,9 +1123,7 @@ CREATE TABLE `ss_products` (
   FULLTEXT KEY `description` (`description`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1146 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_products
--- ----------------------------
+
 INSERT INTO `ss_products` VALUES ('261', '香猪', '1', 'upload/image/xiangzhu.jpg', 'upload/image/xiangzhu_lit.jpg', '香猪素有“一家煮肉四邻香，七里之遥闻其味”之美称而被誉为猪类的“名门贵族”。', '<p>香猪体型矮、小、短、圆，头轻且耳薄小；背腰凹弯，直立稍向外倾，腹大下垂而不拖地，四肢呈五色而短小紧凑。因其骨细脚矮、皮薄多肉、脂肪极少、味鲜甘香、食而不腻，素有&ldquo;山珍果子狸&rdquo;之美誉。不仅营养丰富，而且口感香酥、益于美容、延缓衰老，符合人们追求高品质的需要。</p>', '30.00', '28.00', '0.00', '1', '0', '1329116343', '220', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '', '');
 INSERT INTO `ss_products` VALUES ('262', '大闸蟹', '1', 'upload/image/pangxie.jpg', 'upload/image/pangxie_lit.jpg', '螃蟹是甲壳类动物，这类生物遗传物质数目复杂且有着很大的差异性，常多达100多对。绝大多数种类的螃蟹生活在海里或靠近海洋，当然也有一些的螃蟹栖于淡水或住在陆地。螃蟹靠鳃呼吸', '<p>蟹乃食中珍味，素有&ldquo;一盘蟹，顶桌菜&rdquo;的民谚。它不但味美，且营养丰富，是一种高蛋白的补品。<br />\r\n根据产地可分为河蟹、江蟹、湖蟹三种。河蟹以河北、天津产的最为著名，江蟹以南京产的最好，湖蟹以湖北武汉梁子湖、江苏苏州的阳澄湖、山东微山湖、南京高淳固城湖产的品质较好。螃蟹盛产在 8～9月，特别是高梁红时是吃蟹的最好时节，有&ldquo;七尖八圆&rdquo;之说。螃蟹的头胸甲呈圆形，褐绿色，螯足长大且密生绒毛，频足侧扁而长，顶端尖锐，螃蟹肉白嫩，味鲜美。</p>', '35.00', '33.00', '0.00', '1', '1', '1329113355', '219', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '', '');
 INSERT INTO `ss_products` VALUES ('263', '对虾', '1', 'upload/image/duixia.jpg', 'upload/image/duixia_lit.jpg', '虾，是一种生活在水中的长身动物，属节肢动物甲壳类，种类很多，包括青虾、河虾、草虾、小龙虾、对虾、明虾、基围虾、琵琶虾、龙虾等。 虾具有超高的食疗价值，并用做于中药材', '<p>现代医学研究证实，虾的营养价值极高，能增强人体的免疫力和性功能，补肾壮阳，抗早衰。常吃鲜虾（炒、烧、炖皆可），温酒送服，可医治肾虚阳痿、畏寒、体倦、腰膝酸痛等病症。如果妇女产后乳汁少或无乳汁，鲜虾肉500克，研碎，黄酒热服，每日3次，连服几日，可起催乳作用。虾皮有镇静作用，常用来治疗神经衰弱，植物神经功能紊乱诸症。海虾是可以为大脑提供营养的美味食品。海虾中含有三种重要的脂肪酸，能使人长时间保持精力集中。</p>', '54.00', '52.00', '0.00', '1', '0', '1329113002', '219', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '', '');
@@ -1337,9 +1174,6 @@ INSERT INTO `ss_products` VALUES ('307', '竹', '3', 'upload/image/zhuzi.jpg', '
 INSERT INTO `ss_products` VALUES ('308', '大豆', '2', 'upload/image/dadou.jpg', 'upload/image/dadou_lit.jpg', '大豆（学名：Glycine max），中国古称菽，是一种其种子含有丰富的蛋白质的豆科植物。大豆呈椭圆形、球形，颜色有黄色、淡绿色、黑色等，故又有黄豆、青豆、黑豆之称。大豆最常用来做各种豆制品、压豆油、炼酱油和提炼蛋白质。豆渣或磨成粗粉的大豆也常用于禽畜饲料。', '<p>大豆的种子含17%的油和63%的粗粉，其中50%是蛋白质。因为大豆不含淀粉；所以适于糖尿病患者食用。在东亚，大豆广泛用于制做豆浆、豆腐；亦可烘烤用作小吃。大豆芽可用于沙拉，可作蔬菜。将大豆和麦粒压碎，加入霉菌，加盐水发酵，经6个月至1年以上，制成的褐色液体称为酱油，在东方的烹调中普遍应用。20世纪80年代初，美国成为世界大豆生产大国，巴西和中国次之。现代工艺技术使大豆的用途更加多样化。豆油可以加工成人造黄油、人造奶酪，还可制成油漆、粘合剂、化肥、上浆剂、油毡、杀虫剂、灭火剂的成分。豆粉则是代替肉类的高蛋白食物，可制成多种食品，包括婴儿食品。大豆含有的植物型雌激素能有效地抑制人体内雌激素的产生，而雌激素过高乃是引发乳腺癌的主要原因之一。实验证明，常吃豆粉的一组老鼠患乳腺癌比例较未吃者低70%。此外，大白菜含一种叫作吲哚-3-甲醇的化合物，能使体内一种重要的酶数量增加，帮助分解过多的雌激素而阻止乳癌发生。 </p>', '8.00', '7.00', '0.00', '1', '0', '1329373989', '214', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '', '');
 INSERT INTO `ss_products` VALUES ('309', '磷酸铵', '3', 'upload/image/lingshuan.jpg', 'upload/image/lingshuan_lit.jpg', '磷酸铵为无机化合物，一般指(NH4)2HPO4･NH4H2PO4，为无色晶体或灰白色粉末，有时为颗粒，易溶于水。含有氮、磷，是一种复合肥料。', '<p>磷酸铵是正磷酸与氨的化合物。正磷酸与氨反应时因中和程度不同，生成三种盐类，即磷酸一铵、磷酸二铵、磷酸三铵。磷酸三铵的性质很不稳定，在常温下放出氨而变成磷酸二铵。磷酸铵是二元复合肥料。其中磷酸一铵纯品含氮(N)12.17％，含磷(P)61.71％，商品磷酸一铵无统一规格，一般为11-52-0。磷酸二铵纯品含氮(N)21.71％，含磷(P)53.75％，商品磷酸二铵的规格为18-46-0或16-48-0。<br />\r\n磷酸铵物理性好，吸湿性小，不易结块，可以长期贮存；磷酸铵易溶于水，在25℃时每100克水可溶解41.6克磷酸一铵，72.1克磷酸二铵。磷酸铵是生产混合肥料的一种理想的基础肥料。磷酸铵中氮素为铵态氮，磷素几乎都是水溶态，适合于各种作物和土壤施用，应深施。宜作基肥和种肥施用。因磷酸铵的含磷量为含氮量的3～4倍，故除了豆科作物之外，施用时必须配施一定量纯氮肥。</p>', '140.00', '135.00', '0.00', '1', '0', '1329380736', '226', 'zh_CN', '-1', '-1', '1', '{member}{admin}{guest}', '0', '', '');
 
--- ----------------------------
--- Table structure for `ss_roles`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_roles`;
 CREATE TABLE `ss_roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1350,16 +1184,12 @@ CREATE TABLE `ss_roles` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_roles
--- ----------------------------
+
 INSERT INTO `ss_roles` VALUES ('1', 'guest', 'Guest', null);
 INSERT INTO `ss_roles` VALUES ('2', 'member', 'Member', null);
 INSERT INTO `ss_roles` VALUES ('3', 'admin', 'Admin', null);
 
--- ----------------------------
--- Table structure for `ss_site_infos`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_site_infos`;
 CREATE TABLE `ss_site_infos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1371,14 +1201,10 @@ CREATE TABLE `ss_site_infos` (
   KEY `s_locale` (`s_locale`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_site_infos
--- ----------------------------
+
 INSERT INTO `ss_site_infos` VALUES ('1', '建站专家--建站之星 sitestar', '各种名牌车型，高中低档车 兰博基尼 保时捷 红旗 奥迪', '各种名牌车型，高中低档车 兰博基尼 保时捷 红旗 奥迪', 'zh_CN');
 
--- ----------------------------
--- Table structure for `ss_static_contents`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_static_contents`;
 CREATE TABLE `ss_static_contents` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1397,15 +1223,10 @@ CREATE TABLE `ss_static_contents` (
   FULLTEXT KEY `content` (`content`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_static_contents
--- ----------------------------
+
 INSERT INTO `ss_static_contents` VALUES ('2', '公司简介', '<p><img width=\"207\" height=\"147\" border=\"0\" src=\"../../../upload/image/C_03ve2ub3.jpg\" alt=\"\" style=\"cursor:pointer;float:left;margin-right:11px;margin-bottom:0px;\" onclick=\"window.open(\'../../../upload/image/C_03ve2ub3.jpg\')\" /></p>\r\n<p>中国**有限公司（简称&ldquo;**集团&rdquo;）系**直接管理的中央农业企业，为原中国**（集团）总公司在与中国**（集团）总公司重组基础上，于2004年10月更名成立。集团资产总额150多亿元，员工8万多人，其中海外员工1万多人。集团拥有全资及控股子公司19家，境内外上市公司4家，业务遍及全国各省（自治区、直辖市），在世界40多个国家（地区）建立了分支机构或基地，与80多个国家（地区）保持经贸往来。 <br />\r\n**集团作为全国规模最大、综合性、国际化的国有中央农业企业，对外致力于国际合作，开发利用农业、渔业资源；对内以服务&ldquo;三农&rdquo;为宗旨，积极推进农业产业化进程。集团经过多年发展，逐步形成了以远洋捕捞及农业资源开发、生物疫苗和兽药及饲料添加剂研发生产销售、农牧渔业相关配套服务为核心的三大主业。 <br />\r\n**集团贯彻党中央、国务院关于国有企业深化改革的部署，按照国资委做大、做强企业的有关要求，将继续推进企业改革，进一步调整优化产业结构，合理配置资源，提高核心竞争力，全面提升企业素质，面向国际、国内两个市场，向着更加远大的目标努力奋斗。<br />\r\n&nbsp;</p>', '1330069703', 'zh_CN', '1', '{member}{admin}{guest}');
 INSERT INTO `ss_static_contents` VALUES ('1', '联系我们', '<p><strong>联系电话：</strong>（021）XXXXXXXX&nbsp;&nbsp; XXXXXXXX<br />\r\n<br />\r\n<strong>传&nbsp;&nbsp; 真：</strong> （021）XXXXXXXX<br />\r\n<br />\r\n<strong>地&nbsp;&nbsp; 址：&nbsp;</strong>&nbsp; XX东路XX号XXX&nbsp;</p>\r\n<p>经过3年的努力我们已经在全国范围内设立了,上海分公司、深圳分公司、无锡分公司、佛山分公司、澳门联络处、香港业务部等驻地分支机构。各个地区有相关 的业务，请联系相关的机构。 <br />\r\n<br />\r\n<strong>全国订购热线：<font color=\"#993300\">400 888 XXXX</font></strong><br />\r\n<br />\r\n<strong>国外订购MSN咨询：</strong><font color=\"#ff6600\">XXXX@MSN.com.cn</font></p>', '1288947516', 'zh_CN', '1', '{member}{admin}{guest}');
 
--- ----------------------------
--- Table structure for `ss_template_categories`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_template_categories`;
 CREATE TABLE `ss_template_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1413,14 +1234,9 @@ CREATE TABLE `ss_template_categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_template_categories
--- ----------------------------
+
 INSERT INTO `ss_template_categories` VALUES ('1', 'test');
 
--- ----------------------------
--- Table structure for `ss_templates`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_templates`;
 CREATE TABLE `ss_templates` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1430,16 +1246,11 @@ CREATE TABLE `ss_templates` (
   KEY `template_category_id` (`template_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_templates
--- ----------------------------
+
 INSERT INTO `ss_templates` VALUES ('1', 'furniture_jackie_0924_2', '999');
 INSERT INTO `ss_templates` VALUES ('2', 'carservice_car_jackie_1218_2', '999');
 INSERT INTO `ss_templates` VALUES ('3', 'jipiao-100726-a1', '999');
 
--- ----------------------------
--- Table structure for `ss_transactions`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_transactions`;
 CREATE TABLE `ss_transactions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1453,13 +1264,7 @@ CREATE TABLE `ss_transactions` (
   KEY `action_time` (`action_time`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_transactions
--- ----------------------------
 
--- ----------------------------
--- Table structure for `ss_user_extends`
--- ----------------------------
 DROP TABLE IF EXISTS `ss_user_extends`;
 CREATE TABLE `ss_user_extends` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1471,16 +1276,11 @@ CREATE TABLE `ss_user_extends` (
   KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_user_extends
--- ----------------------------
 INSERT INTO `ss_user_extends` VALUES ('1', '0.00', '0.00', '0.00', '1');
 INSERT INTO `ss_user_extends` VALUES ('2', '0.00', '0.00', '0.00', '0');
 INSERT INTO `ss_user_extends` VALUES ('3', '0.00', '0.00', '0.00', '2');
 
--- ----------------------------
--- Table structure for `ss_users`
--- ----------------------------
+
 DROP TABLE IF EXISTS `ss_users`;
 CREATE TABLE `ss_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1504,6 +1304,4 @@ CREATE TABLE `ss_users` (
   KEY `active` (`active`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of ss_users
--- ----------------------------
+
