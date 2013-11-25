@@ -1,0 +1,17 @@
+1.解压出来将所有文件上传到空间根目录
+2.上传完成后 运行  你的域名/diguo  帐号admin 密码123456登录
+设置好数据库信息 恢复数据到你的数据库
+3.修改数据库链接文件config.php
+
+里面的
+数据库用户名(public static $db_user)
+数据库名public static $db_name
+密码(public static $db_pass)
+
+为你的数据库信息
+4.修改好后 就能访问网站了 
+后台地址
+你的域名/admin
+密码123456
+
+本整站程序由源码基地www.85wu.com 提供
